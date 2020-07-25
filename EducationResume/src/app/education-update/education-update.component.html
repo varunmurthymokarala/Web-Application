@@ -1,0 +1,53 @@
+<div class = "row">
+    <div class = "col-md-3 col-md-offset-2">
+
+    </div>
+    <div class = "col-md-3">
+        <h2>Education Create</h2>
+        <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+            <div class = "form-group">
+                <input type="hidden" class="form-control" formControlName="educationId" id="educationId">
+            </div>
+            <div class = "form-group">
+                <label for="specilization"><b>Specilization: </b> </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="specilization" id="specilization">
+                <div *ngIf="updateForm.controls.specilization.errors" class="error">
+                    <div *ngIf="updateForm.controls.specilization.errors.required">Specilization is required</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="marks"><b>Marks:</b> </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="marks" id="marks">
+                <div *ngIf="updateForm.controls.marks.errors" class="error">
+                    <div *ngIf="updateForm.controls.marks.errors.required">Marks is required</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="yearofPassing"><b>Year of Passing: </b></label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="yearofPassing" id="yearofPassing">
+                <div *ngIf="updateForm.controls.yearofPassing.errors" class="error">
+                    <div *ngIf="updateForm.controls.yearofPassing.errors.required"> Year of Passing is required</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="startYear"><b>Start Year:</b> </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="startYear" id="startYear">
+                <div *ngIf="updateForm.controls.startYear.errors" class="error">
+                    <div *ngIf="updateForm.controls.startYear.errors.required">Start Year is required</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="qualificationId"><b>Qualification Id:</b> </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="qualificationId" id="qualificationId">
+                <div *ngIf="updateForm.controls.qualificationId.errors" class="error">
+                    <div *ngIf="updateForm.controls.qualificationId.errors.required">Qualification Id is required</div>
+                </div>
+            </div>
+            <div class = "form-group">
+                <label for="userId"><b>User Id:</b> </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" formControlName="userId" id="userId">
+            </div>
+            <button type="button" class="btn btn-primary" type="submit">Update</button>
+        </form>
+    </div>
+</div>

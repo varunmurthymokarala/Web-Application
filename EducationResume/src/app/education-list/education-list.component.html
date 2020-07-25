@@ -1,0 +1,33 @@
+<div class = "container">
+        <h2 style="text-align: center;"><b><u>Education List</u></b> </h2>
+        <button class="btn btn-success" (click)="createEducation(education)"> Create Education </button>
+        <table class = "table table-bordered">
+            <thead style="background-color: lightgray;">
+                <tr  style="text-align: center;">
+                    <th>Education Id</th>
+                    <th>Specialization</th>
+                    <th>Marks</th>
+                    <th>Year of Passing</th>
+                    <th>Start Year</th>
+                    <th>Qualification Id</th>
+                    <th>User Id</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr *ngFor = "let education of educationList">
+                    <td>{{education.educationId}}</td>
+                    <td>{{education.specilization}}</td>
+                    <td>{{education.marks}}</td>
+                    <td>{{education.yearofPassing}}</td>
+                    <td>{{education.startYear}}</td>
+                    <td>{{education.qualificationId}}</td>
+                    <td>{{education.userId}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteEducation(education)"> Delete</button><br>
+                        <button class="btn btn-info" (click)="updateEducation(education)" style="margin-top: 10px;"> Update </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
